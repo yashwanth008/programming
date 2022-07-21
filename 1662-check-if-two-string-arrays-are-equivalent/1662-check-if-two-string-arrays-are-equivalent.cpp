@@ -3,20 +3,10 @@ public:
     bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {
         string ans1="";
         string ans2="";
-        for(int i=0;i<word1.size();i++)
-        {
-            ans1+=word1[i];
-        }
-        for(int i=0;i<word2.size();i++)
-        {
-            ans2+=word2[i];
-        }
-        if(ans1==ans2)
-        {
-            return true;
-        }
-        else
-           return false;
-        
+        for(string s1: word1)
+            ans1+=s1;
+        for(string s2: word2)
+            ans2+=s2;
+        return ans1==ans2;
     }
 };
